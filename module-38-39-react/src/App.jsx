@@ -10,11 +10,16 @@ function App() {
     <>
      
       <h1>Vite + React</h1>
-
+    <Device name="Laptop" pirce="50"></Device>
+    <Device name="mobile" pirce="30" model="eoslie"></Device>
+    <Device ></Device>
     <Person></Person>
     <Person></Person>
     <Person></Person>
     <Person></Person>
+    <Student gread='8' score='99'></Student>
+    <Student grad='4' score='49'></Student>
+    <Student gread='5' score='33'></Student>
     <Student></Student>
     <Developer></Developer>
     <Raju></Raju>
@@ -22,19 +27,29 @@ function App() {
   )
 }
 
+
+function Device(props){
+  console.log(props)
+  return <h2> This device : Laptop</h2>
+}
+
+
 function Person(){
   const age = 23;
   const person={name:'Abdur Razzak', age:23}
  return <h3>hi this is {person.name} age: {age}</h3>
 
 }
+const {gread='1',score='0'} ={grad:'7',score:'99'};
 
-function Student (){
+
+function Student ({grad,score}){
   return (
-  <div>
+  <div className='raju'>
     <h3>This is a student </h3>
-    <p>Name: </p>
-    <P>age:</P>
+    <p>Score: {score} </p>
+
+    <P>age:{grad} </P>
   </div>
 
   )
@@ -74,4 +89,7 @@ function Developer(){
       </div>
     )
   }
+
+
+
 export default App
