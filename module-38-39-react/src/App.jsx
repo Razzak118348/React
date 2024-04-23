@@ -8,28 +8,70 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
+     
       <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+    <Person></Person>
+    <Person></Person>
+    <Person></Person>
+    <Person></Person>
+    <Student></Student>
+    <Developer></Developer>
+    <Raju></Raju>
     </>
   )
 }
 
+function Person(){
+  const age = 23;
+  const person={name:'Abdur Razzak', age:23}
+ return <h3>hi this is {person.name} age: {age}</h3>
+
+}
+
+function Student (){
+  return (
+  <div>
+    <h3>This is a student </h3>
+    <p>Name: </p>
+    <P>age:</P>
+  </div>
+
+  )
+}
+
+// set style directly 
+function Developer(){
+  const developerStyle={
+    margin:'20px',
+    padding:'20px',
+    border:'2px solid purple',
+    borderRadius:'20px',
+  }
+  return (
+    <div style={developerStyle}>
+      {/* <div style={{
+    margin:'20px',
+    padding:'20px',
+    border:'2px solid purple',
+    borderRadius:'20px',}>
+    </div> */} 
+    {/* this is same  */}
+      <h5>Devo devo</h5>
+      <p>Coding:</p>
+
+    </div>
+  )
+}
+
+
+// another way to set style by classname 
+  function Raju(){
+    return (
+      <div className='raju'>
+        <h3>This is about of mine</h3>
+        <p>age:22</p>
+      </div>
+    )
+  }
 export default App
